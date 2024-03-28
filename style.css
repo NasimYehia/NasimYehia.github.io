@@ -1,34 +1,70 @@
+body {
+  background-color: #f0f8ff; /* Light blue background */
+  font-family: "Comic Sans MS", cursive, sans-serif; /* Fun font */
+  text-align: center;
+}
+
+h1 {
+  color: #ff4500; /* Orange color */
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #0000ff; /* Blue color */
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
 .video-container {
-  display: grid;
-  grid-template-rows: auto 1fr auto auto;
-  align-items: center;
-  justify-items: center;
-  gap: 10px;
-  margin-bottom: 30px;
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  background-color: #fffafa; /* Light pink background */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some shadow */
+  margin: 10px;
 }
 
 .subtitle {
-  font-size: 30px;
-  color: white;
-  text-shadow: 2px 2px 4px black;
+  font-size: 24px;
+  color: #32cd32; /* Lime green color */
+  margin: 10px 0;
 }
 
 .speech {
   font-size: 20px;
-  color: gray;
-  text-shadow: 2px 2px 4px black;
+  color: #1e90ff; /* Dodger blue color */
+  margin: 10px 0;
 }
 
 .retry-button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #007bff;
+  background-color: #ff69b4; /* Hot pink color */
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .retry-button:hover {
-  background-color: #0056b3;
+  background-color: #ff1493; /* Deep pink color */
+}
+
+#switchButton {
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #00bfff; /* Deep sky blue color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#switchButton:hover {
+  background-color: #1e90ff; /* Dodger blue color */
 }
