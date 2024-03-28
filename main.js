@@ -6,7 +6,7 @@ const retryButton1 = document.getElementById("retryButton1");
 // Load the video
 // videoPlayer1.src = "alaadinStory.mp4";
 
-const videoPlayer2 = document.getElementById("videoPlayer2");
+const videoPlayer2 = document.getElementById("videoPlayer2"); // dfgd
 const subtitleDisplay2 = document.getElementById("subtitleDisplay2");
 const speechDisplay2 = document.getElementById("speechDisplay2");
 const retryButton2 = document.getElementById("retryButton2");
