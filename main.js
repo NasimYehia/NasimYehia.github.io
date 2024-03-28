@@ -4,7 +4,7 @@ const speechDisplay1 = document.getElementById("speechDisplay1");
 const retryButton1 = document.getElementById("retryButton1");
 
 // Load the video
-videoPlayer1.src = "alaadinStory.mp4";
+// videoPlayer1.src = "alaadinStory.mp4";
 
 const videoPlayer2 = document.getElementById("videoPlayer2");
 const subtitleDisplay2 = document.getElementById("subtitleDisplay2");
@@ -12,7 +12,7 @@ const speechDisplay2 = document.getElementById("speechDisplay2");
 const retryButton2 = document.getElementById("retryButton2");
 
 // Load the video
-videoPlayer2.src = "rocky.mp4";
+// videoPlayer2.src = "rocky.mp4";
 
 videoPlayer1.style.display = "block";
 videoPlayer2.style.display = "none";
