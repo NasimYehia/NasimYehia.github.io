@@ -254,7 +254,10 @@ videoPlayer1.addEventListener("timeupdate", () => {
       (sub) => currentTime >= sub.start && currentTime <= sub.end
     );
     if (prevSub1.start != currentSubtitle.start) {
-      if (accumulatedTranscript.toLowerCase() === prevSub1.text.toLowerCase()) {
+      if (
+        accumulatedTranscript.replace(/[,.?!]/g, "").toLowerCase() ===
+        prevSub1.text.replace(/[,.?!]/g, "").toLowerCase()
+      ) {
         subtitleDisplay1.textContent = currentSubtitle
           ? currentSubtitle.text
           : "";
@@ -274,7 +277,10 @@ videoPlayer2.addEventListener("timeupdate", () => {
       (sub) => currentTime >= sub.start && currentTime <= sub.end
     );
     if (prevSub2.start != currentSubtitle.start) {
-      if (accumulatedTranscript.toLowerCase() === prevSub2.text.toLowerCase()) {
+      if (
+        accumulatedTranscript.replace(/[,.?!]/g, "").toLowerCase() ===
+        prevSub2.text.replace(/[,.?!]/g, "").toLowerCase()
+      ) {
         subtitleDisplay2.textContent = currentSubtitle
           ? currentSubtitle.text
           : "";
@@ -326,7 +332,8 @@ recognition.onresult = function (event) {
       if (
         videoPlayer1.paused &&
         prevSub1 &&
-        accumulatedTranscript.toLowerCase() === prevSub1.text.toLowerCase()
+        accumulatedTranscript.replace(/[,.?!]/g, "").toLowerCase() ===
+          prevSub1.text.replace(/[,.?!]/g, "").toLowerCase()
       ) {
         videoPlayer1.play();
         accumulatedTranscript = ""; // Reset the accumulated transcript after a successful match
@@ -345,7 +352,8 @@ recognition.onresult = function (event) {
       if (
         videoPlayer2.paused &&
         prevSub2 &&
-        accumulatedTranscript.toLowerCase() === prevSub2.text.toLowerCase()
+        accumulatedTranscript.replace(/[,.?!]/g, "").toLowerCase() ===
+          prevSub2.text.replace(/[,.?!]/g, "").toLowerCase()
       ) {
         videoPlayer2.play();
         accumulatedTranscript = ""; // Reset the accumulated transcript after a successful match
