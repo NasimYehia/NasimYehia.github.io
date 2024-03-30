@@ -295,7 +295,7 @@ videoPlayer2.addEventListener("timeupdate", () => {
 
 let accumulatedTranscript = ""; // Accumulate recognized speech here
 
-
+/*
 videoPlayer1.addEventListener("seeked", () => {
   const currentTime = videoPlayer1.currentTime;
   const currentSubtitle = subtitles1.find(
@@ -321,7 +321,7 @@ videoPlayer2.addEventListener("seeked", () => {
     subtitleDisplay2.textContent = "";
   }
 });
-
+*/
 
 //Display Speech
 videoPlayer1.addEventListener("timeupdate", () => {

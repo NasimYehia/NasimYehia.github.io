@@ -1,75 +1,54 @@
 body {
-  background-color: #f0f8ff; /* Light blue background */
-  font-family: "Comic Sans MS", cursive, sans-serif; /* Fun font */
-  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
 }
 
 h1 {
-  color: #ff4500; /* Orange color */
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-
-h2 {
-  color: #0000ff; /* Blue color */
-  font-size: 30px;
-  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
 }
 
 .video-container {
-  display: inline-block;
-  vertical-align: top;
-  width: 45%;
-  background-color: #fffafa; /* Light pink background */
-  border-radius: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some shadow */
-  margin: 10px;
+  text-align: center;
 }
 
-.subtitle {
-  font-size: 36px;
-  color: #32cd32; /* Lime green color */
-  margin: 10px 0;
+h2 {
+  color: #666;
+}
+
+video {
+  max-width: 100%;
+  border-radius: 5px;
 }
 
 .subtitle,
 .speech {
-  font-size: 36px; /* Adjust the font size as needed */
-}
-
-.speech {
-  font-size: 20px;
-  color: #1e90ff; /* Dodger blue color */
-  margin: 10px 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 18px;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .retry-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #ff69b4; /* Hot pink color */
-  color: white;
+  background-color: #007bff;
   border: none;
   border-radius: 5px;
+  color: #fff;
   cursor: pointer;
+  font-size: 16px;
   margin-top: 10px;
+  padding: 10px 20px;
 }
 
 .retry-button:hover {
-  background-color: #ff1493; /* Deep pink color */
-}
-
-#switchButton {
-  padding: 10px 20px;
-  font-size: 20px;
-  background-color: #00bfff; /* Deep sky blue color */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-
-#switchButton:hover {
-  background-color: #1e90ff; /* Dodger blue color */
+  background-color: #0056b3;
 }
