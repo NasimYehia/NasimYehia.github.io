@@ -28,11 +28,20 @@ video {
   border-radius: 5px;
 }
 
+.subtitle {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #000000;
+  font-size: 36px; /* Increased font size */
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 .subtitle,
 .speech {
   background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
-  font-size: 18px;
+  font-size: 36px;
   margin-top: 10px;
   padding: 5px;
   border-radius: 5px;
