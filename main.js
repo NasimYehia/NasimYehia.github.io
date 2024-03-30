@@ -68,7 +68,7 @@ const subtitles1 = [
   { start: 56, end: 57, text: "Give me the lamp first" },
   { start: 58, end: 59, text: "or i will leave" },
   { start: 64, end: 65, text: "Aladdin was scared" },
-  { start: 66, end: 67, text: "He tried to qet out" },
+  { start: 66, end: 67, text: "He tried to get out" },
   { start: 67, end: 68, text: "this way and that way" },
   { start: 68, end: 70, text: "in the end" },
   { start: 70, end: 72, text: "Aladdin rubbed the lamp" },
@@ -145,7 +145,7 @@ const subtitles1 = [
   },
   {
     Start: 294,
-    end: 299,
+    end: 400,
     text: "I am glad I bring you back The princess said I am glad to see you again",
   },
 ];
@@ -238,7 +238,7 @@ const subtitles2 = [
   { start: 256, end: 257, text: "their heads hit the pillow" },
   { start: 258, end: 260, text: "Henry and Rocky were snoring" },
   { start: 262, end: 262, text: "in their dreams" },
-  { start: 263, end: 264, text: "they ventured back into space" },
+  { start: 263, end: 400, text: "they ventured back into space" },
 ];
 let prevSub1 = subtitles1[0];
 let prevSub2 = subtitles2[0];
@@ -295,8 +295,35 @@ videoPlayer2.addEventListener("timeupdate", () => {
 
 let accumulatedTranscript = ""; // Accumulate recognized speech here
 
-//Display Speech
 
+videoPlayer1.addEventListener("seeked", () => {
+  const currentTime = videoPlayer1.currentTime;
+  const currentSubtitle = subtitles1.find(
+    (sub) => currentTime >= sub.start && currentTime <= sub.end
+  );
+  if (currentSubtitle) {
+    prevSub1 = currentSubtitle;
+    subtitleDisplay1.textContent = currentSubtitle.text;
+  } else {
+    subtitleDisplay1.textContent = "";
+  }
+});
+
+videoPlayer2.addEventListener("seeked", () => {
+  const currentTime = videoPlayer2.currentTime;
+  const currentSubtitle = subtitles2.find(
+    (sub) => currentTime >= sub.start && currentTime <= sub.end
+  );
+  if (currentSubtitle) {
+    prevSub2 = currentSubtitle;
+    subtitleDisplay2.textContent = currentSubtitle.text;
+  } else {
+    subtitleDisplay2.textContent = "";
+  }
+});
+
+
+//Display Speech
 videoPlayer1.addEventListener("timeupdate", () => {
   if (chooseVideo === true) {
     speechDisplay1.textContent = accumulatedTranscript;
